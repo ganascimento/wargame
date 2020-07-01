@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    margin: 40px 0 0 0;
+    padding: 0;
+    background-color: #FFF;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(240,240,240);
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #888; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+#screen {
+    background-color: white;
+    border: 1px solid #CCC;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+}
+.align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.align-left {
+    display: flex;
+    align-items: center;
+}
+.name-game {
+    margin-bottom: 30px;
+    font-size: 60px;    
+}
+.content-game {
+    height: 300px;
+    width: 600px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(150,150,150);
+    flex-direction: column;
+}
+.input-enter {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    width: 280px;
+}
+.input-enter:focus { outline: none; }
+.content-color { margin-top: 10px; }
+.color-select {
+    width: 40px;
+    height: 40px;
+    margin-left: 7px;
+    cursor: pointer;
+}
+.color-select:hover {
+    border: 2px solid red;
+    width: 36px;
+    height: 36px;
+}
+.game-btn {
+    margin-top: 30px;
+    width: 150px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 50px;
+}
+.game-btn-disabled {
+    background-color: rgb(210,210,210);
+    cursor: not-allowed;
+}
+.game-btn-enable {
+    background-color: limegreen;
+    cursor: pointer;
+}
+.game-btn-enable:hover { background-color: lightgreen; }
+.content-lobby { flex-direction: row; }
+#lobby { display: none; }
+.room {
+    width: 70%;
+    height: 100%;
+    overflow-y: auto;
+}
+.room-item {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(220,220,220);
+    border-bottom: 1px solid rgb(160,160,160);
+    transition: .2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.room-item:hover {
+    background-color: rgb(230,230,230);
+}
+.room-item p { margin-left: 15px; }
+.room-item span { margin-right: 15px; }
+.menu {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(250,250,250);
+    border-left: 1px solid rgb(200,200,200);
+}
+.lobby-btn {
+    display: block;
+    font-size: 13px;
+    margin: 10px;
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(200,200,200);
+    border: 3px outset rgb(130,130,130);
+    transition: .2s;
+    cursor: pointer;
+}
+.lobby-btn:hover {
+    transition: .2s;
+    border: 2px outset rgb(130,130,130);
+}
+#content-create-room {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+}
+.create-room-modal {
+    height: 300px;
+    width: 400px;
+    background-color: rgb(250,250,250);
+    flex-direction: column;
+    z-index: 1000;
+}
+#select-room { display: none; }
+#content-name-room {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(230,230,230);
+    font-size: 13px;
+}
+#play-game { display: none; }
+.content-info-game {
+    width: 280px;
+    height: 430px;
+    background-color: rgb(254,254,254);
+    box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+    padding: 10px;
+}
+#status-my-player { 
+    margin-right: 20px;
+    height: 250px;
+}
+#status-other-players { 
+    margin-left: 20px;
+    width: 240px;
+}
+#color-player-icon {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-right: 8px;
+}
+.content-player-info {
+    border: 1px solid rgb(200,200,200);
+    height: 80px;
+    flex-direction: column;
+}
+#screen-game { display: none; }
+.content-life {
+    height: 12px;
+    width: 200px;
+    border: 1px solid rgb(150,150,150);
+    margin-top: 10px;
+}
+.my-life {
+    width: 250px;
+    height: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.life {
+    height: 100%;
+    background-color: lime;
+}
+.commands-keys {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 17px;
+    font-size: 14px;
+    margin-left: 15px;
+}
+.commands-keys i {
+    display: block;
+    margin-right: 5px;
+    font-size: 16px;
+}

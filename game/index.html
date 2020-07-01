@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <title>WarGame</title>
+    </head>
+    <body>
+        <div class="name-game">
+            WAR GAME
+        </div>
+
+        <!-- MENU INICIAL -->
+        <div id="player-infos" class="align-center content-game">
+                <p>Digite seu nome:</p>
+                <input id="name-user" class="input-enter" maxlength="12" />
+
+                <p>Escolha sua cor:</p>
+                <div class="align-center content-color">
+                    <div class="color-select" style="background-color: blue" color="blue"></div>
+                    <div class="color-select" style="background-color: green" color="green"></div>
+                    <div class="color-select" style="background-color: yellow" color="yellow"></div>
+                    <div class="color-select" style="background-color: black" color="black"></div>
+                    <div class="color-select" style="background-color: purple" color="purple"></div>
+                    <div class="color-select" style="background-color: brown" color="brown"></div>
+                </div>
+
+                <a id="start-game" class="align-center game-btn game-btn-disabled">Start</a>
+        </div>
+
+        <!-- MENU ONDE PODE CRIAR E ESCOLHER SALAS -->
+        <div id="lobby" class="content-game content-lobby">
+            <div id="content-rooms" class="room"></div>
+            <div class="menu">
+                <a id="open-modal-create-room" class="lobby-btn">Criar sala</a>
+            </div>
+        </div>
+
+        <!-- SALA DE JOGADORES -->
+        <div id="select-room" class="content-game content-lobby">
+            <div class="room">
+                <div id="content-name-room" class="align-center"></div>
+                <div id="content-player"></div>
+            </div>
+            <div class="menu">
+                <a id="play-game" class="lobby-btn">Começar</a>
+                <a id="return-btn" class="lobby-btn">Voltar</a>
+            </div>
+        </div>
+
+        <!-- MODAL PARA CRIAR SALA -->
+        <div id="content-create-room" class="align-center">
+            <div class="align-center create-room-modal">
+                Nome da sala:
+                <input id="name-room" class="input-enter" maxlength="12" />
+                <a id="create-room" class="align-center game-btn game-btn-disabled">Criar</a>
+            </div>
+        </div>
+
+        <!-- GAME -->
+        <div id="screen-game" class="align-center">
+            <div id="status-my-player" class="content-info-game">
+                <div class="align-left">
+                    <div id="color-player-icon"></div>
+                    <div id="name-player-game"></div>
+                </div>
+                <div class="align-center">
+                    <div class="content-life my-life">
+                        <div id="my-life" class="life"></div>
+                    </div>
+                </div>
+                <a id="return-game-btn" class="lobby-btn">Voltar</a>
+                <div class="commands-keys">
+                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-down"></i>
+                    <i class="fas fa-arrow-left"></i>
+                    : Mover
+                </div>
+                <div class="commands-keys">
+                    <span>F</span>
+                    : Atirar
+                </div>
+                
+            </div>
+            <canvas id="screen" width="50" height="50"></canvas>
+            <div id="status-other-players" class="content-info-game"></div>
+            </div>
+        </div>
+
+        <script src="packages/signalr.min.js"></script>
+        <script type="module" src="scripts/app.js"></script>
+    </body>
+</html>
