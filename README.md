@@ -3,7 +3,7 @@
 #### Wargame is a simple multiplayer game.
 
 <p align="center">
-  <img src="http://www.gadev.com.br/wargame/game.gif" />
+  <img src="http://www.gadev.com.br/gif/game.gif" />
 </p>
 
 It was developed using the following technologies:
